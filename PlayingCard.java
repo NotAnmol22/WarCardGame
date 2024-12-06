@@ -1,7 +1,10 @@
 package ca.sheridancollege.project;
 
+/**
+ * A concrete implementation of a card, representing a standard playing card.
+ */
 public class PlayingCard extends Card {
-    private String suit; 
+    private String suit;
     private int value;
 
     public PlayingCard(String suit, int value) {
@@ -16,6 +19,6 @@ public class PlayingCard extends Card {
     }
 
     public int getValue() {
-        return value; 
+        return value;
     }
 }
