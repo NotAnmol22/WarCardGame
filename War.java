@@ -1,8 +1,19 @@
 package ca.sheridancollege.project;
 
 /**
- * Represents the War card game.
- * Implements the Strategy Pattern for scoring logic.
+ * The War class represents the core gameplay logic of the War card game.
+ * 
+ * **Design Patterns**:
+ * - **Strategy Pattern**: Used to dynamically apply different scoring strategies via the ScoringStrategy interface.
+ * - **Factory Pattern**: Used to create card objects via the CardFactory class.
+ * 
+ * **Object-Oriented Principles**:
+ * - **Single Responsibility Principle (SRP)**: The War class focuses solely on game logic, delegating card creation to CardFactory and scoring to ScoringStrategy.
+ * - **Open/Closed Principle (OCP)**: The scoring strategy can be extended by adding new implementations of ScoringStrategy without modifying the War class.
+ * 
+ * Methods:
+ * - `play()`: Manages the gameplay flow across multiple rounds.
+ * - `declareWinner()`: Determines and announces the winner based on player scores.
  */
 public class War extends Game {
     private GroupOfCards deck;
